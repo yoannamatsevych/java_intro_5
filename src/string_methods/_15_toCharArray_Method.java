@@ -15,5 +15,6 @@ public class _15_toCharArray_Method {
 
         System.out.println(Arrays.toString(s.toCharArray()));
 
+
     }
 }
