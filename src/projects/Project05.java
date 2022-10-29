@@ -22,9 +22,12 @@ public class Project05 {
         findSecondGreatestAndSmallest(numbers4);
 
         System.out.println("\n=========TASK-5===========");
-        String[] strings = {"foo", "bar", "Foo", "bar", "6", "abc", "6", "xyz", "bar", "bar"};
-        findDuplicatedElementsInAnArray(strings);
+        String[] strings5 = {"foo", "bar", "Foo", "bar", "6", "abc", "6", "xyz", "bar", "bar"};
+        findDuplicatedElementsInAnArray(strings5);
 
+        System.out.println("\n=========TASK-6==========");
+        String[] strings6 = {"pen", "eraser", "pencil", "pen", "123", "abc", "pen", "eraser"};
+        findMostRepeatedElementInAnArray(strings6);
 
     }
 
@@ -142,6 +145,18 @@ public class Project05 {
      */
 
     public static void findMostRepeatedElementInAnArray(String[] strings){
-
+            String mostRepeatedElement = "";
+            int counterMostRepeated = 0;
+            int counterHowManyRepeated = 0;
+            for (int i = 0; i < strings.length; i++){
+                for (int j = i + 1; j < strings.length; j++){
+                    if (strings[i].equals(strings[j])) counterHowManyRepeated++;
+                }
+                if(counterHowManyRepeated > counterMostRepeated){
+                    counterMostRepeated = counterHowManyRepeated;
+                    mostRepeatedElement = strings[i];
+                }
+            }
+        System.out.println(mostRepeatedElement);
     }
 }
