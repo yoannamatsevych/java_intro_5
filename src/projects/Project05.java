@@ -139,7 +139,7 @@ public class Project05 {
     }
 
     /*
-    ASK-6 findMostRepeatedElementInAnArray() method
+    TASK-6 findMostRepeatedElementInAnArray() method
     Write a method that takes a String array. Find the most repeated element
     and print it.
      */
