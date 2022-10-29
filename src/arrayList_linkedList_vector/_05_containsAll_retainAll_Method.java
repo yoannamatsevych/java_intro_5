@@ -1,6 +1,7 @@
 package arrayList_linkedList_vector;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class _05_containsAll_retainAll_Method {
     public static void main(String[] args) {
@@ -42,10 +43,14 @@ public class _05_containsAll_retainAll_Method {
         europeCountries.add("Sweden");
         europeCountries.add("Portugal");
         europeCountries.add("Spain");
+
         europeCountries.add("Germany");
         europeCountries.add("Italy");
 
         System.out.println(countries.contains(europeCountries));
+
+        Collections.sort(countries);
+        System.out.println(countries);
 
 
         countries.retainAll(europeCountries);
