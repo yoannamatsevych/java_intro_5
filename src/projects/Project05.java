@@ -70,12 +70,12 @@ public class Project05 {
         them. Complete task using sort() method.
          */
 
-        public static void findSecondGreatestAndSmallestWithSort(int[] numbers){
+   public static void findSecondGreatestAndSmallestWithSort(int[] numbers){
             Arrays.sort(numbers);
 
             int secondSmallest = numbers[0];
             int secondGreatest = numbers[numbers.length-1];
-           for(int i = 1, j = numbers.length - 1; i < numbers.length && j > 0; i++, j--){
+           for(int i = 1; i < numbers.length; i++){
                if(numbers[i] > secondSmallest) {
                    secondSmallest = numbers[i];
                    break;
@@ -91,6 +91,25 @@ public class Project05 {
             System.out.println("Second Smallest = " + secondSmallest);
             System.out.println("Second Greatest = " + secondGreatest);
 
+//       Arrays.sort(numbers);
+//
+//       int min = numbers[0];
+//       int max = numbers[numbers.length-1];
+//
+//       for (int i = 1; i < numbers.length; i++) {
+//           if (numbers[i] > min ) {
+//               min = numbers[i];
+//               break;
+//           }
+//       }
+//       for (int i = numbers.length-1; i >= 0 ; i--) {
+//           if (numbers[i] < max) {
+//               max = numbers[i];
+//               break;
+//           }
+//       }
+//       System.out.println(max);
+//       System.out.println(min);
         }
 
     /*
@@ -155,8 +174,13 @@ public class Project05 {
                 if(counterHowManyRepeated > counterMostRepeated){
                     counterMostRepeated = counterHowManyRepeated;
                     mostRepeatedElement = strings[i];
+
                 }
+                counterHowManyRepeated =  0;
+
             }
+        System.out.println(counterMostRepeated);
         System.out.println(mostRepeatedElement);
+        System.out.println(counterHowManyRepeated);
     }
 }
