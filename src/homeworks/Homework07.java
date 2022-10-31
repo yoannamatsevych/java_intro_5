@@ -125,7 +125,7 @@ public class Homework07 {
 
         System.out.println(marvelCharacters.contains("Wolwerine"));
 
-        System.out.println("=============TASK-5===========");
+        System.out.println("\n=============TASK-6===========");
 
         /*
         Requirement:
