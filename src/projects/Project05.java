@@ -22,7 +22,7 @@ public class Project05 {
         findSecondGreatestAndSmallest(numbers4);
 
         System.out.println("\n=========TASK-5===========");
-        String[] strings5 = {"foo", "bar", "Foo", "bar", "6", "abc", "6", "xyz", "bar", "bar"};
+        String[] strings5 = {"foo", "bar", "Foo", "bar", "6", "abc", "6", "xyz"};
         findDuplicatedElementsInAnArray(strings5);
 
         System.out.println("\n=========TASK-6==========");
