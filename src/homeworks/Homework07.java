@@ -283,7 +283,7 @@ public class Homework07 {
         int counterOddAndLess20 = 0;
         int counterLess15Greater50 = 0;
 
-        for (int number : numbers10){
+        for (Integer number : numbers10){
             if (number % 10 == 0) counterDivided10++;
             if (number % 2 == 0 && number > 15) counterEvenAndGreater15++;
             if (number % 2 == 1 && number < 20) counterOddAndLess20++;

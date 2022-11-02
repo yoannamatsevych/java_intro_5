@@ -95,18 +95,19 @@ public class Homework05 {
             System.out.println("============Task - 9============");
 
             int givenNumber = ScannerHelper.getAnNumber();
-            int c1 = 0;
-            int c2 = 1;
+            int firstNum = 0;
+            int secondNum = 1;
 
             String containerStr = "";
-            int i = 1;
-            while (i <= givenNumber) {
-                containerStr += c1 + " - ";
-                int summa = c1 + c2;
-                c1 = c2;
-                c2 = summa;
-                i++;
+
+            for (int i = 1; i < givenNumber; i++) {
+                containerStr += firstNum + " - ";
+                int summa = firstNum + secondNum;
+                firstNum = secondNum;
+                secondNum = summa;
             }
+
+
             System.out.println(containerStr.substring(0, containerStr.length() - 3));
 
             System.out.println("==============Task - 10==============");

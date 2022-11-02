@@ -26,7 +26,7 @@ public class Project05 {
         findDuplicatedElementsInAnArray(strings5);
 
         System.out.println("\n=========TASK-6==========");
-        String[] strings6 = {"pen", "eraser", "pencil", "pen", "123", "abc", "pen", "eraser"};
+        String[] strings6 = {"pen", "eraser", "pencil", "pen", "123", "abc", "pen", "eraser", "eraser"};
         findMostRepeatedElementInAnArray(strings6);
 
     }
