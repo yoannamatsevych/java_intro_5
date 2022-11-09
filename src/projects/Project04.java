@@ -194,7 +194,7 @@ public class Project04 {
         if (givenSentence.length() < 1) System.out.println("This sentence does not have any characters");
         else {
             for (int i = 0; i < givenSentence.length(); i++){
-                if (givenSentence.charAt(i) == 'a' || givenSentence.charAt(i) == 'A') counterForA++;
+                if (givenSentence.toLowerCase().charAt(i) == 'a') counterForA++;
             }
             System.out.println("This sentence has " + counterForA + " a or A letters.");
         }

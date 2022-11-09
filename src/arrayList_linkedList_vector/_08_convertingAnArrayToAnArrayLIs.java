@@ -1,5 +1,6 @@
 package arrayList_linkedList_vector;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class _08_convertingAnArrayToAnArrayLIs {
@@ -20,7 +21,7 @@ public class _08_convertingAnArrayToAnArrayLIs {
         System.out.println("\n=======WAY-2 with loop - Manual WAY=========");
 
         char[] arr2 = {'A', '#', '5', '+'};
-        LinkedList<Character> characters = new LinkedList<>();
+        LinkedList<Character> characters = new LinkedList<>(Arrays.asList('a', 'b'));
 
         for (char c : arr2){
             characters.add(c);

@@ -77,4 +77,10 @@ public class _03_IntegerArrayList {
 
 
     }
+
+
+    public static  ArrayList numbers (ArrayList<Integer> numbers){
+
+        return new ArrayList<>(numbers);
+    }
 }

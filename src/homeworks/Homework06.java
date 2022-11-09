@@ -123,10 +123,10 @@ public class Homework06 {
         //for-each loop
         boolean isPluto = false;
         for (String cartoonDog : cartoonDogs) {
-            if (cartoonDog.equals("Pluto")) {
+            if (cartoonDog.equals("Pluto"))
                 isPluto = true;
-                break;
-            }
+
+
         }
         System.out.println(isPluto);
         // METHOD
@@ -153,14 +153,14 @@ public class Homework06 {
         String[] cartoonCats = {"Garfield", "Tom", "Sylvester", "Azrael"};
         Arrays.sort(cartoonCats);
         System.out.println(Arrays.toString(cartoonCats));
-        boolean isGarfieldAndFelix = false;
+        boolean isGarfield = false;
+        boolean isFelix = false;
         for (String cartoonCat : cartoonCats) {
-            if (cartoonCat.equals("Garfield") && cartoonCat.equals("Felix")) {
-                isGarfieldAndFelix = true;
-                break;
-            }
+            if (cartoonCat.equals("Garfield"))  isGarfield = true;
+            if (cartoonCat.equals("Felix")) isFelix = true;
+
         }
-        System.out.println(isGarfieldAndFelix);
+        System.out.println(isFelix && isGarfield);
 
         //METHOD
         Arrays.sort(cartoonCats);
@@ -320,9 +320,8 @@ public class Homework06 {
         int[] numbers03 = new int[numbers01.length];
         System.out.println(Arrays.toString(numbers01));
         System.out.println(Arrays.toString(numbers02));
-        for(int i = 0, j = 0; i < numbers01.length && j < numbers02.length; i++, j++){
-            if (numbers01[i] >= numbers02[j]) numbers03[i] = numbers01[i];
-            else numbers03[i] = numbers02[j];
+        for(int i = 0; i < numbers01.length; i++){
+          numbers03[i] = Math.max(numbers01[i], numbers02[i]);
         }
         System.out.println(Arrays.toString(numbers03));
 

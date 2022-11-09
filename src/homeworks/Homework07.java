@@ -174,7 +174,7 @@ public class Homework07 {
 
         System.out.println(characters);
 
-        for (char c : characters){
+        for (Character c : characters){
             System.out.println(c);
         }
 

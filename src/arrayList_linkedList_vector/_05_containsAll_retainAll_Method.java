@@ -52,9 +52,9 @@ public class _05_containsAll_retainAll_Method {
         Collections.sort(countries);
         System.out.println(countries);
 
-
         countries.retainAll(europeCountries);
         System.out.println(countries);
+
 
     }
 }

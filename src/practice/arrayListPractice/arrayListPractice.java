@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 public class arrayListPractice {
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         /*
         1. Create an arrayList and assign 5 numbers
         [1, 2, 3, 4, 5]

@@ -33,7 +33,7 @@ public class Exercise02_RemoveDuplicates {
 
         for (int i = 0; i < languages.size(); i++){
             for (int j = i + 1; j < languages.size(); j++){
-                if (languages.get(j) == languages.get(i)) {
+                if (languages.get(j).equals(languages.get(i))) {
                     languages.remove(j);
                 }
             }
