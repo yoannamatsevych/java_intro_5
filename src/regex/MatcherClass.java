@@ -50,7 +50,7 @@ public class MatcherClass {
         System.out.println(Pattern.matches("[^xyz]", "y")); //false
 
         pattern = Pattern.compile("[A-Za-z0-9_-]{9,15}");
-        System.out.println(Pattern.matches(pattern.toString(), "TechGlobal");
+        System.out.println(Pattern.matches(pattern.toString(), "TechGlobal"));
 
     }
 }
