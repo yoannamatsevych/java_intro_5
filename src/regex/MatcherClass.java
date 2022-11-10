@@ -52,5 +52,7 @@ public class MatcherClass {
         pattern = Pattern.compile("[A-Za-z0-9_-]{9,15}");
         System.out.println(Pattern.matches(pattern.toString(), "TechGlobal"));
 
+        String str = "I love it";
+        str.replace("it", "");
     }
 }
