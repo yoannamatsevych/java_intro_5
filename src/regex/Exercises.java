@@ -70,4 +70,21 @@ public class Exercises {
 
 
     }
+
+    public String notReplace(String str) {
+        if (str.substring(0, 2).equals("is"))
+            return str.replaceAll("is", "is not");
+
+        else if (str.substring(str.length()-2).equals("is"))
+        return str.replaceAll("is", "is not");
+  else {
+            str.replace("is", "is not");
+        }
+        return str;
+
+
+
+
+
+    }
 }

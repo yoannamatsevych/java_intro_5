@@ -1,6 +1,6 @@
 package homeworks;
 
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class test {
