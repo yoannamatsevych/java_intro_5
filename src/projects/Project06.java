@@ -18,8 +18,14 @@ public class Project06 {
 
         ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(2, -5, 6, 7, -10, -78, 0, 15));
         System.out.println(removeNegatives(numbers));
+        ArrayList<Integer>numbers1 = new ArrayList<>(Arrays.asList(2, -5, 6, 7, -10, -78, 0, 15));
+        numbers1.removeIf(x -> x < 0);
+        System.out.println(numbers1);
         numbers = new ArrayList<>(Arrays.asList(7, -4, 6, 7, -10, -78, 0, 65));
         System.out.println(removeNegatives(numbers));
+        numbers1 = new ArrayList<>(Arrays.asList(7, -4, 6, 7, -10, -78, 0, 65));
+        numbers1.removeIf(x -> x < 0);
+        System.out.println(numbers1);
 
         System.out.println("\n===========TASK-3===========");
         System.out.println("=======1 solution=======\n");
@@ -152,7 +158,7 @@ public class Project06 {
 
     public static boolean validatePassword(String password){
 
-        return Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,16}",
+        return Pattern.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*#?&])\\S{8,16}$",
                 password);
     }
 
@@ -164,12 +170,14 @@ public class Project06 {
         int spacialChar=0;
 
         for (int i = 0; i < password.length(); i++){
-            if (Character.isUpperCase(password.charAt(i))) upperCase++;
-            if (Character.isLowerCase(password.charAt(i))) lowerCase++;
-            if (Character.isDigit(password.charAt(i))) digit++;
-            if (Character.isWhitespace(password.charAt(i))) whiteSpase++;
-            if (!Character.isLetter(password.charAt(i)) && !Character.isDigit(password.charAt(i))
-            && !Character.isWhitespace(password.charAt(i))) spacialChar++;
+            if (password.length() >= 8 && password.length() <= 16) {
+                if (Character.isUpperCase(password.charAt(i))) upperCase++;
+                if (Character.isLowerCase(password.charAt(i))) lowerCase++;
+                if (Character.isDigit(password.charAt(i))) digit++;
+                if (Character.isWhitespace(password.charAt(i))) whiteSpase++;
+                if (!Character.isLetter(password.charAt(i)) && !Character.isDigit(password.charAt(i))
+                        && !Character.isWhitespace(password.charAt(i))) spacialChar++;
+            }
 
         }
 

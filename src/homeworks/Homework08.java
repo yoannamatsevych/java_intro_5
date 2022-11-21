@@ -143,8 +143,11 @@ public class Homework08 {
     public static int count3OrLess(){
         String str = ScannerHelper.getAString();
 
-        Pattern pattern = Pattern.compile("\\b\\w{1,3}\\b");
-        Matcher matcher = pattern.matcher(str);
+        String str1 = str.replaceAll(" ", "  ");
+        String str2 = " " + str1 + " ";
+
+        Pattern pattern = Pattern.compile(" [A-Za-z]{1,3} ");
+        Matcher matcher = pattern.matcher(str2);
         int count = 0;
         while(matcher.find()){
             count++;
@@ -180,6 +183,7 @@ public class Homework08 {
     public static boolean isDateFormatValid(String dateOfBirth){
 
         return Pattern.matches("[0-9]{2}/[0-9]{2}/[0-9]{4}", dateOfBirth);
+        //  ([0][1-9]|[1][0-2])\/([0][1-9]|[12][0-9]|[3][01])\/(19[0-9]{2}|20[01][0-9]|202[0-2]) - with boundary
     }
 
     /*
