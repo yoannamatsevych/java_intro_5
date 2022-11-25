@@ -1,5 +1,6 @@
 package homeworks;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Homework09 {
@@ -33,19 +34,29 @@ public class Homework09 {
        // int[] arr1 = {-4, 0, -7, 0, 5, 10, 45, 45};
        // int[] arr1 =  {-8, 56, 7, 8, 65};
         int[] arr1 = {3, 4, 3, 3, 5, 5, 6, 6, 7};
-        String duplicate1 = "";
-        for (int i = 0; i < arr1.length; i++){
-            if (!duplicate1.isEmpty()) break;
-            for(int j = i+1; j < arr1.length; j++){
-                if (arr1[i] == arr1[j]) {
-                    duplicate1+= arr1[i];
-                    break;
-                }
-            }
-        }
 
-        if (duplicate1.isEmpty()) System.out.println("There is no duplicates.");
-        else System.out.println(duplicate1);
+        ArrayList<Integer> numbersList = new ArrayList<>();
+
+        for (Integer number : arr1) {
+            if (numbersList.contains(number)){
+                System.out.println(number);
+                break;
+            }
+            else numbersList.add(number);
+        }
+//        String duplicate1 = "";
+//        for (int i = 0; i < arr1.length; i++){
+//            if (!duplicate1.isEmpty()) break;
+//            for(int j = i+1; j < arr1.length; j++){
+//                if (arr1[i] == arr1[j]) {
+//                    duplicate1+= arr1[i];
+//                    break;
+//                }
+//            }
+//        }
+
+//        if (duplicate1.isEmpty()) System.out.println("There is no duplicates.");
+//        else System.out.println(duplicate1);
 
         System.out.println("========Task2========");
 
@@ -158,7 +169,6 @@ public class Homework09 {
                         !duplicate4.toLowerCase().contains(words4[i].toLowerCase())){
                     duplicate4 += words4[i];
                     System.out.println(words4[i]);
-                    break;
                 }
             }
         }
