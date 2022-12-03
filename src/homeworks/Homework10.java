@@ -37,6 +37,7 @@ public class Homework10 {
         System.out.println(removeDuplicateNumbers(nums));
         nums = new ArrayList<>(Arrays.asList(1, 2, 5, 2, 3));
         System.out.println(removeDuplicateNumbers(nums));
+        ArrayList<Integer> num = new ArrayList<>(nums);
 
         System.out.println("\n===========TASK-5==========");
         ArrayList<String> words = new ArrayList<>(Arrays.asList("java", "C#", "ruby", "JAVA", "ruby", "C#", "C++"));
@@ -63,6 +64,8 @@ public class Homework10 {
         System.out.println(findClosestTo10(numbers8));
         int[] nums8 = {10, -13, 12, 8, 15, -20};
         System.out.println(findClosestTo10(nums8));
+
+
 
     }
 
@@ -303,6 +306,15 @@ public class Homework10 {
         return absDifference;
     }
 
-
+    public String[] fizzBuzz(int start, int end) {
+        String[] arr = new String[end-start];
+        for (int i = start; i < end; i++){
+            if (i % 3 == 0 && i % 5 == 0) arr[i] = "FizzBuzz";
+            else if (i % 3 == 0) arr[i] = "Fizz";
+            else if (i % 5 == 0) arr[i] = "Buzz";
+            else arr[i] = i + "";
+        }
+        return arr;
+    }
 
 }
