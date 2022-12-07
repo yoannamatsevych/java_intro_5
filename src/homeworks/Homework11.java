@@ -1,7 +1,9 @@
 package homeworks;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.jar.JarOutputStream;
 
 public class Homework11 {
@@ -82,6 +84,8 @@ public class Homework11 {
         System.out.println(countPrimes(arr8_2));
         int[] arr8_3 = {41, 53, 19, 47, 67};
         System.out.println(countPrimes(arr8_3));
+        int[] arr8_4 = {41, 53, 19, 47, 67};
+        System.out.println(countPrimes1(arr8_4));
 
     }
 
@@ -150,11 +154,9 @@ public class Homework11 {
      */
     public static boolean hasVowel(String str){
         str = str.toLowerCase();
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'o' ||
-                    str.charAt(i) == 'u' || str.charAt(i) == 'i') return true;
-        }
-        return false;
+        return str.contains("a") || str.contains("e") || str.contains("o") ||
+                    str.contains("u") || str.contains("i");
+
     }
 
     /*TASK-4
@@ -180,8 +182,10 @@ public class Homework11 {
     Expected Result 5: AGE IS NOT VALID
      */
     public static void checkAge(int yearOfBirth){
-        Calendar cal = Calendar.getInstance();
-        int currentYear = cal.get(Calendar.YEAR);
+        Date date = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy");
+        System.out.println(dateFormat.format(date));
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
         if ((currentYear - yearOfBirth) > 100 || (currentYear - yearOfBirth) < 0) System.out.println("AGE IS NOT VALID");
         else if ((currentYear - yearOfBirth) < 16) System.out.println("AGE IS NOT ALLOWED");
         else System.out.println("AGE IS ALLOWED");
@@ -224,7 +228,6 @@ public class Homework11 {
     “###”]
      */
 
-    //WHY IT does not work with for-each loop
     public static String[] noA(String[] elements){
         for (int i = 0; i < elements.length; i++) {
             if(elements[i].toLowerCase().startsWith("a")) elements[i] = "###";
@@ -291,6 +294,20 @@ public class Homework11 {
             }
         }
         return prime;
+    }
+
+    public static int countPrimes1(int[] arr) {
+        int nonPrimeNumber = 0;
+        for (int num: arr) {
+            if (num < 2){
+                nonPrimeNumber++;
+                continue;
+            }
+            for (int i = 2; i < num; i++) {
+                if (num % i == 0) nonPrimeNumber++;
+            }
+        }
+    return arr.length-nonPrimeNumber;
     }
 
 }
