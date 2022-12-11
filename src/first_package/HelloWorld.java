@@ -1,5 +1,7 @@
 package first_package;
 
+import singleton.Student;
+
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello W");
@@ -9,6 +11,10 @@ public class HelloWorld {
 
         System.out.println("Yoanna");
         System.out.println("Matsevych");
+
+        Student student = Student.getStudent();
+
+        System.out.println(student); // singleton.Student@7ea987ac
 
     }
 }
