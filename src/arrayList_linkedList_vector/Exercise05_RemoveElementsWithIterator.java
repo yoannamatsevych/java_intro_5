@@ -32,5 +32,24 @@ public class Exercise05_RemoveElementsWithIterator {
             if(x.toLowerCase().contains("book")) elementsIterator.remove();
         }
         System.out.println(objects);
+
+        int[] outer = new int[9];
+        int[] inner = {2, 4};
+        System.out.println(linearIn(outer, inner));
+
+    }
+
+    public static boolean linearIn(int[] outer, int[] inner) {
+        int appears = 0;
+        ArrayList<Integer> nums = new ArrayList<>();
+        for(int i = 0; i < inner.length; i++){
+            for(int j = 0; j < outer.length; j++){
+                if(inner[i] == outer[j] && !nums.contains(inner[i])){
+                    appears++;
+                    nums.add(inner[i]);
+                }
+            }
+        }
+        return appears == inner.length;
     }
 }
