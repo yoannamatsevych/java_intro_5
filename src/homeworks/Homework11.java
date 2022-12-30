@@ -279,21 +279,33 @@ public class Homework11 {
     Expected Result 3:  5
      */
     public static int countPrimes(int[] arr){
-        int prime = 0;
-        boolean isNotPrime = false;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] >=2){
-                for (int j = 2; j < arr[i]; j++) {
-                    if(arr[i] % j == 0) {
-                        isNotPrime = true;
-                        break;
-                    }
+//        int prime = 0;
+//        boolean isNotPrime = false;
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] >=2){
+//                for (int j = 2; j < arr[i]; j++) {
+//                    if(arr[i] % j == 0) {
+//                        isNotPrime = true;
+//                        break;
+//                    }
+//                }
+//                if(!isNotPrime) prime++;
+////                isNotPrime = false;
+//            }
+//        }
+//        return prime;
+
+        int counter = 0, result = 0;
+        for (int i : arr) {
+            if(i >= 2) {
+                for (int j = 1; j <= i; j++) {
+                    if(i % j == 0) counter++;
                 }
-                if(!isNotPrime) prime++;
-                isNotPrime = false;
+                if(counter == 2) result++;
             }
+            counter = 0;
         }
-        return prime;
+        return result;
     }
 
     public static int countPrimes1(int[] arr) {

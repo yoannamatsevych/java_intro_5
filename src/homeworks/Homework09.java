@@ -2,6 +2,7 @@ package homeworks;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashSet;
 
 public class Homework09 {
     public static void main(String[] args) {
@@ -31,11 +32,11 @@ public class Homework09 {
         3
          */
 
-       // int[] arr1 = {-4, 0, -7, 0, 5, 10, 45, 45};
-       // int[] arr1 =  {-8, 56, 7, 8, 65};
-        int[] arr1 = {3, 4, 3, 3, 5, 5, 6, 6, 7};
+        int[] arr1 = {-4, 0, -7, 0, 5, 10, 45, 45};
+        int[] arr2 =  {-8, 56, 7, 8, 65};
+        int[] arr3 = {3, 4, 3, 3, 5, 5, 6, 6, 7};
 
-        ArrayList<Integer> numbersList = new ArrayList<>();
+       ArrayList<Integer> numbersList = new ArrayList<>();
 
         for (Integer number : arr1) {
             if (numbersList.contains(number)){
@@ -54,7 +55,7 @@ public class Homework09 {
 //                }
 //            }
 //        }
-
+//
 //        if (duplicate1.isEmpty()) System.out.println("There is no duplicates.");
 //        else System.out.println(duplicate1);
 
@@ -136,6 +137,15 @@ public class Homework09 {
         }
         if (duplicate3.isEmpty()) System.out.println("There is no duplicates.");
 
+        int[] numbers4 = {0, -4, -7, 5, 10, 45};
+
+        ArrayList<Integer> list = new ArrayList<>();
+
+        for (Integer i : numbers4) {
+            if(!list.contains(i)) list.add(i);
+        }
+        if(numbers4.length == list.size()) System.out.println("There is no duplicates");
+        else System.out.println(Arrays.toString(list.toArray()));
 
         System.out.println("========Task4========");
 
@@ -206,6 +216,13 @@ public class Homework09 {
 
         System.out.println(Arrays.toString(arr5));
 
+
+        ArrayList<String> arr = new ArrayList<>();
+        for (int i = words5.length-1; i >= 0 ; i--) {
+            arr.add(words5[i]);
+        }
+        System.out.println(Arrays.toString(arr.toArray()));
+
         System.out.println("==========Task6=========");
 
         /*
@@ -232,7 +249,7 @@ public class Homework09 {
 
         for (String element : arr6){
             for (int i = element.length() - 1; i >= 0; i--){
-                newStr += element.charAt(i);
+                newStr += element.substring(i, i+1);
             }
             newStr += " ";
         }
@@ -242,7 +259,14 @@ public class Homework09 {
 
 
 
+        ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(10, 20, 35, 20, 35, 60, 70, 60));
 
+        ArrayList<Integer> n = new ArrayList<>();
+
+        for (int i = 0; i < nums.size(); i++) {
+            if(!n.contains(nums.get(i))) n.add(nums.get(i));
+        }
+        System.out.println(n);
 
 
 

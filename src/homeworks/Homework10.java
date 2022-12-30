@@ -96,7 +96,7 @@ public class Homework10 {
         else {
             str = str.trim().replaceAll("[ ]+", " ");
             for (int i = 0; i < str.length(); i++) {
-                if (str.charAt(i) == ' ') counter1++;
+                if (Character.isWhitespace(str.charAt(i))) counter1++;
             }
         }
         return counter1 + 1;
@@ -298,10 +298,8 @@ public class Homework10 {
         int absDifference = Integer.MAX_VALUE;
 
         for (int num : nums) {
-            if (Math.abs(10 - num) <= Math.abs(absDifference - 10) && num != 10) {
-                if (Math.abs(10 - num) == Math.abs(absDifference - 10)) absDifference = Math.min(num, absDifference);
-                else absDifference = num;
-            }
+            if (Math.abs(10 - num) == Math.abs(absDifference - 10)) absDifference = Math.min(num, absDifference);
+            if (Math.abs(10 - num) < Math.abs(absDifference - 10) && num != 10) absDifference = num;
         }
         return absDifference;
     }

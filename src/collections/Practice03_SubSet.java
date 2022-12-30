@@ -41,7 +41,7 @@ public class Practice03_SubSet {
 //        System.out.println(nums.first()); //NoSuchElementException
 
         System.out.println(nums.pollFirst()); // null
-        System.out.println(nums.pollLast());// null
+        System.out.println(nums.pollLast());// null[-
 
 
     }

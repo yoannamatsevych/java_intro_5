@@ -1,13 +1,12 @@
 package collections;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
-import java.util.Stack;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class _04_Set_Methods {
     public static void main(String[] args) {
-        Set<String> set = new HashSet<>();
+        Set<String> set = new HashSet<>(Arrays.asList("a", "b"));
+        System.out.println(set);
 
         set.add("Foo");
         set.add("Bar");
@@ -43,6 +42,16 @@ public class _04_Set_Methods {
         System.out.println(set.size()); // 0
         System.out.println(set); //[]
 
+        reverse("large dog");
+    }
+
+    public static void reverse(String str){
+        String[] arr = str.split(" ");
+        String result = "";
+        for (String s : arr) {
+            result += new StringBuilder(s).reverse() + " ";
+        }
+        System.out.println(result.substring(0, result.length()-1));
     }
 
 

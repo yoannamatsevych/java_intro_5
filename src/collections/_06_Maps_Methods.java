@@ -62,6 +62,7 @@ public class _06_Maps_Methods {
         System.out.println(treeSet);
 
         Collection<String> collection = capitals.values();
+        TreeSet<String> set1 = new TreeSet<>(collection);
         System.out.println(collection); // [Istanbul, Rome, Madrid]
 
         ArrayList<String> list = new ArrayList<>(capitals.values());
@@ -84,7 +85,35 @@ public class _06_Maps_Methods {
             System.out.println("Key = " + entry.getKey() + " Value = " + entry.getValue());
         }
 
+        LinkedHashMap<String, Integer> groceryList = new LinkedHashMap<>();
+        groceryList.put("Orange", 2);
+        groceryList.put("Apple", 3);
+        groceryList.put("Kiwi", 5);
+        System.out.println(total(groceryList));
 
     }
+
+            /*
+      Orange - $2
+      Apple - $3
+      Kiwi - $5
+
+
+      get 1 Orange -> $2
+      get 2 Apples -> $6
+      get 3 Kiwi -> $15
+      TOTAL: $23
+    */
+
+    public static String total(LinkedHashMap<String, Integer> groceryList){
+        int total = 0;
+        int index = 1;
+        for (Map.Entry<String, Integer> item : groceryList.entrySet()){ // Orange = 2, Apple = 3, Kiwi = 5
+            total += item.getValue() * index++;
+        }
+        return "$" + total;
+    }
+
+
 
 }
