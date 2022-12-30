@@ -16,18 +16,18 @@ public class Homework13 {
         System.out.println(hasLowerCase("hello"));
 
         System.out.println("==========TASK-2=======");
-        System.out.println(noZero(new ArrayList<Integer>(Arrays.asList(1))));
-        System.out.println(noZero(new ArrayList<Integer>(Arrays.asList(1, 1, 10))));
-        System.out.println(noZero(new ArrayList<Integer>(Arrays.asList(0, 1, 10))));
-        System.out.println(noZero(new ArrayList<Integer>(Arrays.asList(0, 0, 0))));
+        System.out.println(noZero(new ArrayList<>(Arrays.asList(1))));
+        System.out.println(noZero(new ArrayList<>(Arrays.asList(1, 1, 10))));
+        System.out.println(noZero(new ArrayList<>(Arrays.asList(0, 1, 10))));
+        System.out.println(noZero(new ArrayList<>(Arrays.asList(0, 0, 0))));
 
         System.out.println("===========TASK-3=========");
         int[] arr = {1, 2, 3};
-        System.out.println(Arrays.toString(numberAndSquare(arr)));
+        System.out.println(Arrays.deepToString(numberAndSquare(arr)));
         int[] arr1 = {0, 3, 6};
-        System.out.println(Arrays.toString(numberAndSquare(arr1)));
+        System.out.println(Arrays.deepToString(numberAndSquare(arr1)));
         int[] arr2 = {1, 4};
-        System.out.println(Arrays.toString(numberAndSquare(arr2)));
+        System.out.println(Arrays.deepToString(numberAndSquare(arr2)));
 
         System.out.println("=============TASK-4===========");
         String[] arr4_1 = {"abc", "foo", "java"};
