@@ -1,11 +1,5 @@
 package homeworks;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import primitives.Char;
-
-import java.util.Arrays;
-import java.util.Map;
-
 public class Homework14 {
     public static void main(String[] args) {
 
